@@ -35,6 +35,14 @@ python manage.py test
 ```
 
 
+## Superuser and admin details
+
+Go to http://localhost:8000/admin/ to log in as an administrator using below credentials.
+Currently, superuser is sahilpunchhi
+username: sahilpunchhi   
+password: sahilp   
+
+
 ## User guide and main features
 
 ### Add a book
