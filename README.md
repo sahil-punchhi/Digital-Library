@@ -153,4 +153,27 @@ Q: How is front end code developed?
 A: Bootstrap and crispy forms are used for developing front end code.   
 
 Q: Where are uni tests stored?   
-A: Unit tests are written in "/library/tests.py"   
+A: Unit tests are written in "/library/tests.py"
+
+## Website Interface
+
+### Login Page
+![Login](https://github.com/sahil-punchhi/digital-library/blob/main/images/login.png)
+
+### Sign up/ Registration Page
+![Sign up](https://github.com/sahil-punchhi/digital-library/blob/main/images/sign_up_page.png)
+
+### Add a book
+![Add book](https://github.com/sahil-punchhi/digital-library/blob/main/images/add_book.png)
+
+### View all books
+![View books](https://github.com/sahil-punchhi/digital-library/blob/main/images/original_collection.png)
+
+### View books added in last 7 days
+![View books over x days](https://github.com/sahil-punchhi/digital-library/blob/main/images/view_collection_last_7days.png)
+
+### Delete a book
+![Delete book](https://github.com/sahil-punchhi/digital-library/blob/main/images/delete_book_title.png)
+
+### Invalid ISBN
+![Invalid ISBN](https://github.com/sahil-punchhi/digital-library/blob/main/images/delete_book_isbn.png)
