@@ -5,24 +5,21 @@ Application for customers who would like to store information on the different b
 
 ## Deployment instructions
 
-(Download this project from GitHub:)
+(Download this project from GitHub)
 
 ```
 git clone https://github.com/sahil-punchhi/digital-library.git
 
 ```
 
-You may set up a Python virtual environment
+You may set up a Python virtual environment (optional)   
 and install the required Python packages.
 Use Python3.7
-
 ```
 pip install -r requirements.txt  
 ```
 
-If pip successfully installed all the required packages, that is a success!
-
-Run the backend server,
+Run the backend server.
 ```
 python manage.py runserver  
 ```  
