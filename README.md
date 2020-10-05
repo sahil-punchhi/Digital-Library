@@ -43,7 +43,7 @@ username: sahilpunchhi
 password: sahilp   
 
 
-## User guide and main features
+## Main features, User guide and Tips
 
 ### Add a book
 User can add a book by clicking on 'Add a Book' tab in the sidebar of homepage. A book can be added only if user has logged into the system. This page opens a form which requires 3 fields - 'Title', 'Author' and 'ISBN'. Once user clicks on 'submit' button, ISBN field is validated using Google Books API and upon successful validation, new book is added to user's list of books. The system automatically keeps track of the book addition time.
@@ -55,7 +55,7 @@ User can view a collection by clicking on 'View Books' tab in the sidebar of hom
 User also has an option to view collection he/she has added over the specific number of last days. This can be done by entering the number of days on 'View Books' tab and the book collection will accordingly change. Example: enter '7' if you want to view the book collection you have added in last 7 days.
 
 ### Delete a book
-User can delete a book by clicking on 'Delete a Book' tab in the sidebar of homepage. A book can be deleted only if user has logged into the system. This page shows list of all the user's books and asks the user to delete a particular book from the current collection by entering the book 'title' or book 'ISBN'.
+User can delete a book by clicking on 'Delete a Book' tab in the sidebar of homepage. A book can be deleted only if user has logged into the system. This page shows list of all the user's books and asks the user to delete a particular book from the current collection by entering the book 'title' or book 'ISBN'. Book title should be exactly entered as the original title (is case-sensitive). ISBN should be entered as a 13 digit number without dashes and spaces. Only one of the two (title or ISBN) should be entered.
 
 ### Google Books API
 'Goob' service through 'isbntools' library is used for validating ISBN number. This is a free service and does not require API key.
