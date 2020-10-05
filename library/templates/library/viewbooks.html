@@ -1,0 +1,52 @@
+{% extends "library/base.html" %}
+{% block title %}View List{% endblock %}
+
+{% load crispy_forms_tags %}
+
+{% block content %}
+	<h4>Your book collection
+
+	{% if days == 0 %}
+		!
+	{% elif days == "1" %}
+		in last {{days}} day!
+
+	{% else %}
+		in last {{days}} days!
+
+	{% endif %}
+	</h4>
+	
+	<ul>
+		{% for data in dataset %}
+			<li>{{data.title}} by <i>{{data.author}}</i></li>
+		{% endfor %}
+	</ul>
+
+
+
+
+	<br></br>
+	<br></br>
+	<h6>Want to check the collection you have added specifically over the last few days?<h6>
+
+		<h6>Just enter the number of days below for that!</h6>
+		<form action="" class="from-group">
+			{% csrf_token %}
+			<label for="title">Number of days:</label>
+			<input style="border-radius: 1px" type="text" id="days" name="days"><br><br>
+			<button type="button" class="btn btn-success" onclick="getInputValue();">Submit</button>
+		</form>
+		<script>
+			function getInputValue(){
+					// Selecting the input element and get its value
+					var inputVal = document.getElementById("days").value;
+
+					// Displaying the value
+					window.location.href = 'http://127.0.0.1:8000/' + inputVal + '/viewbook/';
+
+			}
+		</script>
+
+
+{% endblock %}

@@ -1,0 +1,49 @@
+{% extends 'library/base.html' %}
+
+{% block title %}
+Home
+{% endblock %}
+
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+
+	<h4>Below is your current book collection
+
+	{% if days == 0 %}
+		!
+	{% elif days == "1" %}
+		in last {{days}} day!
+	{% else %}
+		in last {{days}} days!
+	{% endif %}
+	</h4>
+
+	<ul>
+		{% for data in dataset %}
+			<li>{{data.title}} by <i>{{data.author}}</i></li>
+		{% endfor %}
+	</ul>
+
+  <br></br>
+  <h5>Which book would you like to delete from above?</h5>
+  <p>Enter below title of the book or its ISBN number.</p>
+  <form action="" class="from-group">
+    {% csrf_token %}
+    <label for="title">Title/ISBN:</label>
+    <input style="border-radius: 1px" type="text" id="title" name="title"><br><br>
+    <button type="button" class="btn btn-success" onclick="getInputValue();">Submit</button>
+  </form>
+  <script>
+    function getInputValue(){
+        // Selecting the input element and get its value
+        var inputVal = document.getElementById("title").value;
+
+        // Displaying the value
+        window.location.href = 'http://127.0.0.1:8000/' + inputVal + '/deletebook/';
+
+    }
+  </script>
+
+{% endblock %}

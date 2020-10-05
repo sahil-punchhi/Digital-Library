@@ -1,0 +1,13 @@
+{% extends "library/base.html" %}
+{% block title %}View List{% endblock %}
+
+{% load crispy_forms_tags %}
+
+{% block content %}
+	<h5>This is not a valid ISBN.</h5>
+	<br></br>
+	<h6>We check the ISBN you have entered using Google Books API.</h6>
+	<br></br>
+	<h5><a href="/addbook">Please try adding a book again!</a></h5>
+
+{% endblock %}

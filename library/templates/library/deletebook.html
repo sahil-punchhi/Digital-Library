@@ -1,0 +1,44 @@
+{% extends "library/base.html" %}
+{% block title %}View List{% endblock %}
+
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+
+
+
+	<h5>From the books listed below:</h5>
+
+	<ul>
+		{% for data in dataset %}
+			<li>{{data.title}} by <i>{{data.author}}</i></li>
+		{% endfor %}
+	</ul>
+
+  <br></br>
+  <h5>You have selected the following book to delete:</h5>
+
+  <ul>
+    {% for data in dataset2 %}
+      <li>{{data.title}} by <i>{{data.author}}</i></li>
+    {% endfor %}
+  </ul>
+
+  <div class="main">
+      <!-- Create a Form -->
+      <form method="POST" class="from-group">
+          <!-- Security token by Django -->
+          {% csrf_token %}
+          <p style="margin-left: -150px;">
+          Are you sure you want to delete this book?
+
+          <button type="submit" class="btn btn-success">Submit</button>
+          <a href="/">Cancel </a>
+          </p>
+
+
+      </form>
+  </div>
+
+{% endblock %}

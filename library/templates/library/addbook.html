@@ -1,0 +1,12 @@
+{% extends "library/base.html" %}
+{% block title %}Add Book{% endblock %}
+
+{% load crispy_forms_tags %}
+
+{% block content %}
+<form action="/addbook/" method="post" class="from-group">
+    {% csrf_token %}
+    {{ form|crispy }}
+    <button type="submit" class="btn btn-success">Submit</button>
+</form>
+{% endblock %}
