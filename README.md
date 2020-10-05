@@ -172,8 +172,11 @@ A: Unit tests are written in "/library/tests.py"
 ### View books added in last 7 days
 ![View books over x days](https://github.com/sahil-punchhi/digital-library/blob/main/images/view_collection_last_7days.png)
 
-### Delete a book
+### Delete a book (by Title)
 ![Delete book](https://github.com/sahil-punchhi/digital-library/blob/main/images/delete_book_title.png)
 
-### Invalid ISBN
+### Delete a book (by ISBN)
 ![Invalid ISBN](https://github.com/sahil-punchhi/digital-library/blob/main/images/delete_book_isbn.png)
+
+### Invalid ISBN
+![Invalid ISBN](https://github.com/sahil-punchhi/digital-library/blob/main/images/invalid_isbn.png)
