@@ -32,7 +32,7 @@ Go to http://localhost:8000/login/
 
 ## Unit tests
 
-Run the following command once you are inside 'libraryproject' folder to perform the unit tests. You can set the 'flag' to 'False' in library/tests.py file to False if you don't want to print statements on the terminal explaining the test cases.
+Run the following command to perform the unit tests. You can set the 'flag' to 'False' in library/tests.py file if you don't want to print statements on the terminal explaining the test cases.
 ```
 python manage.py test
 ```
@@ -103,23 +103,50 @@ Register view
 **libraryproject/requirements.txt**  
 Packages and dependencies requirements file
 
+### Frontend
+
+**libraryproject/library/templates/library/base.html**  
+Base template which can be extended using other templates
+
+**libraryproject/library/templates/library/viewbooks.html**  
+View books (collection) template
+
+**libraryproject/library/templates/library/addbook.html**  
+Add book template
+
+**libraryproject/library/templates/library/delete.html**  
+Delete book form template
+
+**libraryproject/library/templates/library/deletebook.html**  
+Delete book confirmation template
+
+**libraryproject/library/templates/library/invalidisbn.html**  
+Template when user enters invalid ISBN
+
+**libraryproject/library/templates/registration/login.html**  
+Login template
+
+**libraryproject/register/templates/register/registration.html**  
+New user signup template
+
+
 
 ## FAQ
 
-Q: How to view your source code?
-A: I prefer you to use Atom IDE.
+Q: How to view your source code?   
+A: I prefer to use Atom IDE.   
 
-Q: What are the assumptions made?
-A: ISBN number is 13 digits and is considered without dashes and spaces.
+Q: What are the assumptions made?   
+A: ISBN number is 13 digits and is considered without dashes and spaces.   
 
-Q: How are books validated?
-A: Books are validated by matching ISBN number from Google Books API. 'Goob' service through 'isbntools' library is used for validation.
+Q: How are books validated?   
+A: Books are validated by matching ISBN number from Google Books API. 'Goob' service through 'isbntools' library is used for validation.   
 
-Q: What are the constraints used?
-A: Various constraints are used for password field, email field, username, country field. A user cannot add/ delete/ view book unless he/she is logged in.
+Q: What are the constraints used?   
+A: Various constraints are used for password field, email field, username, country field. A user cannot add/ delete/ view book unless he/she is logged in.   
 
-Q: How is front end code developed?
-A: Bootstrap and crispy forms are used for developing front end code.
+Q: How is front end code developed?   
+A: Bootstrap and crispy forms are used for developing front end code.   
 
-Q: Where are uni tests stored?
-A: Unit tests are written in "/library/tests.py"
+Q: Where are uni tests stored?   
+A: Unit tests are written in "/library/tests.py"   
