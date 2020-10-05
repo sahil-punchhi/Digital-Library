@@ -9,7 +9,6 @@ Application for customers who would like to store information on the different b
 
 ```
 git clone https://github.com/sahil-punchhi/digital-library.git
-
 ```
 
 You may set up a Python virtual environment (optional)   
